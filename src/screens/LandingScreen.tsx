@@ -41,6 +41,10 @@ export const LandingScreen: React.FC = () => {
     navigation.navigate('HRDashboard' as any);
   };
 
+  const handleBusinessSolutionsPress = () => {
+    navigation.navigate('BusinessSolutions' as any);
+  };
+
 
 
   return (
@@ -177,6 +181,16 @@ export const LandingScreen: React.FC = () => {
               >
                 <UserGroupIcon size={20} color="#000000" />
                 <Text style={styles.dashboardCardTitle}>RH</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={styles.dashboardCard} onPress={handleBusinessSolutionsPress}>
+              <LinearGradient
+                colors={['#8B5CF6', '#7C3AED']}
+                style={styles.dashboardCardGradient}
+              >
+                <BuildingIcon size={20} color="#FFFFFF" />
+                <Text style={styles.dashboardCardTitle}>Entreprise</Text>
               </LinearGradient>
             </TouchableOpacity>
           </View>

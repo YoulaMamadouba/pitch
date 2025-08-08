@@ -27,6 +27,10 @@ import {
   MicrophoneIcon,
   ChatBubbleLeftRightIcon,
   TrophyIcon,
+  StarIcon,
+  HeartIcon,
+  MessageIcon,
+  ShareIcon,
 } from '../components/Icons';
 
 type LearnerDashboardScreenNavigationProp = StackNavigationProp<RootStackParamList, 'MainTabs'>;
@@ -68,6 +72,10 @@ export const LearnerDashboardScreen: React.FC = () => {
 
   const handleEmotionRecognitionPress = () => {
     navigation.navigate('EmotionRecognition' as any);
+  };
+
+  const handleCommunityPress = () => {
+    navigation.navigate('CommunityFeed' as any);
   };
 
   return (
@@ -318,6 +326,36 @@ export const LearnerDashboardScreen: React.FC = () => {
               <Text style={styles.moduleSubtitleLocked}>Verrouillé</Text>
             </View>
           </View>
+        </View>
+
+        {/* Community Section */}
+        <View style={styles.communitySection}>
+          <Text style={styles.sectionTitle}>Communauté</Text>
+          <TouchableOpacity style={styles.communityCard} onPress={handleCommunityPress}>
+            <LinearGradient
+              colors={['#8B5CF6', '#7C3AED']}
+              style={styles.communityCardGradient}
+            >
+              <View style={styles.communityCardHeader}>
+                <View style={styles.communityCardInfo}>
+                  <Text style={styles.communityCardTitle}>Flux Communautaire</Text>
+                  <Text style={styles.communityCardSubtitle}>Connectez-vous avec d'autres apprenants</Text>
+                </View>
+                <View style={styles.communityIconContainer}>
+                  <UsersIcon size={24} color="#FFFFFF" />
+                </View>
+              </View>
+              
+              <View style={styles.communityCardFooter}>
+                <View style={styles.communityBadge}>
+                  <Text style={styles.communityBadgeText}>ACTIF</Text>
+                </View>
+                <TouchableOpacity style={styles.communityButton}>
+                  <Text style={styles.communityButtonText}>Voir Plus</Text>
+                </TouchableOpacity>
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -794,6 +832,77 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#FFFFFF',
     textAlign: 'center',
+  },
+  // Community Section Styles
+  communitySection: {
+    paddingHorizontal: 24,
+    marginBottom: 24,
+  },
+  communityCard: {
+    borderRadius: 12,
+    overflow: 'hidden',
+    shadowColor: '#8B5CF6',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.3,
+    shadowRadius: 15,
+    elevation: 10,
+  },
+  communityCardGradient: {
+    padding: 16,
+  },
+  communityCardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  communityCardInfo: {
+    flex: 1,
+  },
+  communityCardTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#FFFFFF',
+    marginBottom: 4,
+  },
+  communityCardSubtitle: {
+    fontSize: 14,
+    color: '#E0E7FF',
+  },
+  communityIconContainer: {
+    width: 48,
+    height: 48,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  communityCardFooter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  communityBadge: {
+    backgroundColor: '#10B981',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  communityBadgeText: {
+    color: '#FFFFFF',
+    fontSize: 10,
+    fontWeight: 'bold',
+  },
+  communityButton: {
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 8,
+  },
+  communityButtonText: {
+    color: '#8B5CF6',
+    fontSize: 14,
+    fontWeight: '500',
   },
 });
 

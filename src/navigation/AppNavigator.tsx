@@ -35,6 +35,12 @@ import { AICoachChatScreen } from '../screens/AICoachChatScreen';
 import { LeaderboardScreen } from '../screens/LeaderboardScreen';
 import { VRCalibrationScreen } from '../screens/VRCalibrationScreen';
 import { EmotionRecognitionScreen } from '../screens/EmotionRecognitionScreen';
+import { BusinessSolutionsScreen } from '../screens/BusinessSolutionsScreen';
+import { CommunityFeedScreen } from '../screens/CommunityFeedScreen';
+import PresentationCreatorScreen from '../screens/PresentationCreatorScreen';
+import { BusinessAnalysisScreen } from '../screens/BusinessAnalysisScreen';
+import TeamManagementScreen from '../screens/TeamManagementScreen';
+import RecordingStudioScreen from '../screens/RecordingStudioScreen';
 
 // Créer les navigateurs
 const Stack = createStackNavigator<RootStackParamList>();
@@ -157,7 +163,6 @@ export const AppNavigator = () => {
         <Stack.Screen name="Quiz" component={PlaceholderScreen} />
         <Stack.Screen name="QuizResults" component={PlaceholderScreen} />
         <Stack.Screen name="Certificate" component={PlaceholderScreen} />
-        <Stack.Screen name="CommunityFeed" component={PlaceholderScreen} />
         <Stack.Screen name="PublishVideo" component={PlaceholderScreen} />
                  <Stack.Screen name="Comments" component={PlaceholderScreen} />
          <Stack.Screen name="Notifications" component={NotificationsScreen} />
@@ -173,7 +178,13 @@ export const AppNavigator = () => {
         <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
         <Stack.Screen name="VRCalibration" component={VRCalibrationScreen} />
         <Stack.Screen name="EmotionRecognition" component={EmotionRecognitionScreen} />
-         <Stack.Screen name="Subscription" component={PlaceholderScreen} />
+                <Stack.Screen name="BusinessSolutions" component={BusinessSolutionsScreen} />
+        <Stack.Screen name="CommunityFeed" component={CommunityFeedScreen} />
+        <Stack.Screen name="PresentationCreator" component={PresentationCreatorScreen} />
+        <Stack.Screen name="BusinessAnalysis" component={BusinessAnalysisScreen} />
+        <Stack.Screen name="TeamManagement" component={TeamManagementScreen} />
+        <Stack.Screen name="RecordingStudio" component={RecordingStudioScreen} />
+        <Stack.Screen name="Subscription" component={PlaceholderScreen} />
         <Stack.Screen name="FAQ" component={PlaceholderScreen} />
         <Stack.Screen name="Support" component={PlaceholderScreen} />
         <Stack.Screen name="Error" component={PlaceholderScreen} />

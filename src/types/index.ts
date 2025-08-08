@@ -146,9 +146,13 @@ export type RootStackParamList = {
   HRDashboard: undefined;
   ModuleDetail: undefined;
   AICoachChat: undefined;
-  Leaderboard: undefined;
   VRCalibration: undefined;
   EmotionRecognition: undefined;
+  BusinessSolutions: undefined;
+  PresentationCreator: undefined;
+  BusinessAnalysis: undefined;
+  TeamManagement: undefined;
+  RecordingStudio: undefined;
   Subscription: undefined;
   FAQ: undefined;
   Support: undefined;

@@ -269,6 +269,12 @@ export const PencilIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', 
   </Svg>
 );
 
+export const EditIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" fill={color} />
+  </Svg>
+);
+
 export const ExclamationTriangleIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
   <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
     <Path d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" fill={color} />
@@ -346,3 +352,35 @@ export const ChartBarIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF'
     <Path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" fill={color} />
   </Svg>
 );
+
+export const TrendingUpIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L12 10.586 14.586 8H12z" fill={color} />
+  </Svg>
+);
+
+export const TrendingDownIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M12 13a1 1 0 110 2h5a1 1 0 001-1v-5a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586l-4.293-4.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L12 9.414 14.586 12H12z" fill={color} />
+  </Svg>
+);
+
+export const VideoCameraIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 001.447.894l2-1A1 1 0 0018 11V9a1 1 0 00-.553-.894l-2-1z" fill={color} />
+  </Svg>
+);
+
+export const ExpandIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={style}>
+    <Path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Svg>
+);
+
+export const RefreshIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={style}>
+    <Path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Svg>
+);
+
+
