@@ -80,6 +80,12 @@ export const SearchIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', 
   </Svg>
 );
 
+export const DownloadIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill={color} />
+  </Svg>
+);
+
 export const BellIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
   <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
     <Path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" fill={color} />
@@ -249,6 +255,20 @@ export const EyeIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', sty
   </Svg>
 );
 
+export const EyeSlashIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M3.707 2.293a1 1 0 00-1.414 1.414l6.921 6.922a1 1 0 00.845.277 1 1 0 00.845-.277l6.921-6.922a1 1 0 00-1.414-1.414L10 8.586 3.707 2.293z" fill={color} />
+    <Path d="M10 12a2 2 0 100-4 2 2 0 000 4z" fill={color} />
+    <Path d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" fill={color} />
+  </Svg>
+);
+
+export const PencilIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" fill={color} />
+  </Svg>
+);
+
 export const ExclamationTriangleIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
   <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
     <Path d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" fill={color} />
@@ -276,5 +296,29 @@ export const CogIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', sty
 export const VolumeIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
   <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
     <Path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.5 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.5l4.883-3.793a1 1 0 011.617.793zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" fill={color} />
+  </Svg>
+);
+
+export const ChatBubbleLeftRightIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" fill={color} />
+  </Svg>
+);
+
+export const QuestionMarkCircleIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" fill={color} />
+  </Svg>
+);
+
+export const TrophyIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.51V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" fill={color} />
+  </Svg>
+);
+
+export const UserGroupIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" fill={color} />
   </Svg>
 );

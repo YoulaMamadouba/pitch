@@ -40,8 +40,8 @@ export const LearnerDashboardScreen: React.FC = () => {
   };
 
   const handleModulePress = (moduleId: string) => {
-    // Navigation directe vers VR pour le moment
-    navigation.navigate('VRSceneSelection');
+    // Navigation vers le détail du module
+    navigation.navigate('ModuleDetail' as any);
   };
 
   const handleVRPress = () => {
@@ -68,10 +68,10 @@ export const LearnerDashboardScreen: React.FC = () => {
         </View>
         <View style={styles.headerActions}>
           <TouchableOpacity style={styles.headerButton}>
-            <ChartIcon width={24} height={24} color="#FFFFFF" />
+            <ChartIcon size={24} color="#FFFFFF" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.headerButton}>
-            <SettingsIcon width={24} height={24} color="#FFFFFF" />
+            <SettingsIcon size={24} color="#FFFFFF" />
           </TouchableOpacity>
         </View>
       </View>
@@ -116,7 +116,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   <Text style={styles.currentModuleSubtitle}>Maîtriser la communication non-verbale</Text>
                 </View>
                 <View style={styles.playButtonContainer}>
-                  <PlayIcon width={24} height={24} color="#000000" />
+                  <PlayIcon size={24} color="#000000" />
                 </View>
               </View>
               
@@ -155,7 +155,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   <Text style={styles.vrCardSubtitle}>Pratiquez dans des environnements réalistes</Text>
                 </View>
                 <View style={styles.vrIconContainer}>
-                  <EyeIcon width={24} height={24} color="#FFFFFF" />
+                  <EyeIcon size={24} color="#FFFFFF" />
                 </View>
               </View>
               
@@ -185,7 +185,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   <Text style={styles.voiceCardSubtitle}>Analysez votre technique vocale</Text>
                 </View>
                 <View style={styles.voiceIconContainer}>
-                  <MicrophoneIcon width={24} height={24} color="#000000" />
+                  <MicrophoneIcon size={24} color="#000000" />
                 </View>
               </View>
               
@@ -215,7 +215,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   colors={['#10B981', '#059669']}
                   style={styles.moduleIconGradient}
                 >
-                  <CheckIcon width={16} height={16} color="#000000" />
+                  <CheckIcon size={16} color="#000000" />
                 </LinearGradient>
               </View>
               <Text style={styles.moduleTitle}>Module 1</Text>
@@ -231,7 +231,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   colors={['#10B981', '#059669']}
                   style={styles.moduleIconGradient}
                 >
-                  <CheckIcon width={16} height={16} color="#000000" />
+                  <CheckIcon size={16} color="#000000" />
                 </LinearGradient>
               </View>
               <Text style={styles.moduleTitle}>Module 2</Text>
@@ -248,7 +248,7 @@ export const LearnerDashboardScreen: React.FC = () => {
                   colors={['#F4C056', '#FFD700']}
                   style={styles.moduleIconGradient}
                 >
-                  <PlayIcon width={16} height={16} color="#000000" />
+                  <PlayIcon size={16} color="#000000" />
                 </LinearGradient>
               </View>
               <Text style={styles.moduleTitle}>Module 6</Text>
@@ -259,7 +259,7 @@ export const LearnerDashboardScreen: React.FC = () => {
             <View style={styles.moduleCardLocked}>
               <View style={styles.moduleIconContainer}>
                 <View style={styles.moduleIconLocked}>
-                  <LockIcon width={16} height={16} color="#9CA3AF" />
+                  <LockIcon size={16} color="#9CA3AF" />
                 </View>
               </View>
               <Text style={styles.moduleTitleLocked}>Module 7</Text>
@@ -281,16 +281,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 28,
+    paddingHorizontal: 16,
     paddingVertical: 16,
-    paddingTop: 10,
-    marginTop: 10,
+    paddingTop: 50,
     backgroundColor: 'rgba(0,0,0,0.2)',
+    minHeight: 80,
   },
   profileSection: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
+    flex: 1,
   },
   profileImage: {
     width: 40,
@@ -312,13 +313,16 @@ const styles = StyleSheet.create({
   headerActions: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 4,
+    marginLeft: 8,
   },
   headerButton: {
     width: 36,
     height: 36,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: 18,
   },
   scrollView: {
     flex: 1,

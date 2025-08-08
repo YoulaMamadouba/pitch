@@ -139,6 +139,12 @@ export type RootStackParamList = {
   Notifications: undefined;
   Profile: undefined;
   Settings: undefined;
+  Feedback: undefined;
+  Achievements: undefined;
+  HelpAndSupport: undefined;
+  CoachDashboard: undefined;
+  HRDashboard: undefined;
+  ModuleDetail: undefined;
   Subscription: undefined;
   FAQ: undefined;
   Support: undefined;
@@ -150,4 +156,5 @@ export type MainTabParamList = {
   Modules: undefined;
   Community: undefined;
   Profile: undefined;
+  Notifications: undefined;
 };

@@ -21,12 +21,23 @@ import { VRSessionScreen } from '../screens/VRSessionScreen';
 import { VoiceRecordingScreen } from '../screens/VoiceRecordingScreen';
 import { VoiceAnalysisScreen } from '../screens/VoiceAnalysisScreen';
 
+// Import des nouveaux écrans
+import ProfileScreen from '../screens/ProfileScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import FeedbackScreen from '../screens/FeedbackScreen';
+import AchievementsScreen from '../screens/AchievementsScreen';
+import HelpAndSupportScreen from '../screens/HelpAndSupportScreen';
+import { CoachDashboardScreen } from '../screens/CoachDashboardScreen';
+import { HRDashboardScreen } from '../screens/HRDashboardScreen';
+import { ModuleDetailScreen } from '../screens/ModuleDetailScreen';
+
 // Créer les navigateurs
 const Stack = createStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
 import { View, Text, StyleSheet } from 'react-native';
-import { HomeIcon, BookOpenIcon, UsersIcon, UserIcon } from '../components/Icons';
+import { HomeIcon, BookOpenIcon, UsersIcon, UserIcon, BellIcon } from '../components/Icons';
 
 // Placeholder pour les écrans non encore créés
 const PlaceholderScreen = ({ route }: any) => (
@@ -90,11 +101,21 @@ const MainTabNavigator = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={PlaceholderScreen}
+        component={ProfileScreen}
         options={{
           tabBarLabel: 'Profil',
           tabBarIcon: ({ color, size }) => (
             <UserIcon width={size} height={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={NotificationsScreen}
+        options={{
+          tabBarLabel: 'Notifications',
+          tabBarIcon: ({ color, size }) => (
+            <BellIcon width={size} height={size} color={color} />
           ),
         }}
       />
@@ -135,11 +156,17 @@ export const AppNavigator = () => {
         <Stack.Screen name="Leaderboard" component={PlaceholderScreen} />
         <Stack.Screen name="CommunityFeed" component={PlaceholderScreen} />
         <Stack.Screen name="PublishVideo" component={PlaceholderScreen} />
-        <Stack.Screen name="Comments" component={PlaceholderScreen} />
-        <Stack.Screen name="Notifications" component={PlaceholderScreen} />
-        <Stack.Screen name="Profile" component={PlaceholderScreen} />
-        <Stack.Screen name="Settings" component={PlaceholderScreen} />
-        <Stack.Screen name="Subscription" component={PlaceholderScreen} />
+                 <Stack.Screen name="Comments" component={PlaceholderScreen} />
+         <Stack.Screen name="Notifications" component={NotificationsScreen} />
+         <Stack.Screen name="Profile" component={ProfileScreen} />
+         <Stack.Screen name="Settings" component={SettingsScreen} />
+         <Stack.Screen name="Feedback" component={FeedbackScreen} />
+         <Stack.Screen name="Achievements" component={AchievementsScreen} />
+         <Stack.Screen name="HelpAndSupport" component={HelpAndSupportScreen} />
+         <Stack.Screen name="CoachDashboard" component={CoachDashboardScreen} />
+         <Stack.Screen name="HRDashboard" component={HRDashboardScreen} />
+         <Stack.Screen name="ModuleDetail" component={ModuleDetailScreen} />
+         <Stack.Screen name="Subscription" component={PlaceholderScreen} />
         <Stack.Screen name="FAQ" component={PlaceholderScreen} />
         <Stack.Screen name="Support" component={PlaceholderScreen} />
         <Stack.Screen name="Error" component={PlaceholderScreen} />

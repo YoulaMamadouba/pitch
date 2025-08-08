@@ -12,7 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import { PlayIcon, UserIcon, BuildingIcon, CheckIcon, GamepadIcon, UsersIcon } from '../components/Icons';
+import { PlayIcon, UserIcon, BuildingIcon, CheckIcon, GamepadIcon, UsersIcon, ChartIcon, UserGroupIcon } from '../components/Icons';
 
 type LandingScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Landing'>;
 
@@ -32,6 +32,16 @@ export const LandingScreen: React.FC = () => {
   const handleLoginPress = () => {
     navigation.navigate('Login');
   };
+
+  const handleCoachDashboardPress = () => {
+    navigation.navigate('CoachDashboard' as any);
+  };
+
+  const handleHRDashboardPress = () => {
+    navigation.navigate('HRDashboard' as any);
+  };
+
+
 
   return (
     <View style={styles.container}>
@@ -93,6 +103,8 @@ export const LandingScreen: React.FC = () => {
           </TouchableOpacity>
         </View>
 
+
+
         {/* Features Preview */}
         <View style={styles.featuresSection}>
           <Text style={styles.featuresTitle}>Pourquoi Choisir Pitch to Me ?</Text>
@@ -142,6 +154,33 @@ export const LandingScreen: React.FC = () => {
             </View>
           </View>
         </View>
+
+        {/* Dashboard Access Section */}
+        <View style={styles.dashboardSection}>
+          <Text style={styles.dashboardTitle}>Accès Rapide</Text>
+          
+          <View style={styles.dashboardGrid}>
+            <TouchableOpacity style={styles.dashboardCard} onPress={handleCoachDashboardPress}>
+              <LinearGradient
+                colors={['#F4C056', '#FFD700']}
+                style={styles.dashboardCardGradient}
+              >
+                <ChartIcon size={20} color="#000000" />
+                <Text style={styles.dashboardCardTitle}>Coach</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.dashboardCard} onPress={handleHRDashboardPress}>
+              <LinearGradient
+                colors={['#35D0FF', '#00B4D8']}
+                style={styles.dashboardCardGradient}
+              >
+                <UserGroupIcon size={20} color="#000000" />
+                <Text style={styles.dashboardCardTitle}>RH</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
 
       {/* Bottom Navigation */}
@@ -173,7 +212,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 16,
+    paddingTop: 50,
+    paddingBottom: 16,
     backgroundColor: 'rgba(0,0,0,0.2)',
   },
   headerTitle: {
@@ -310,6 +350,42 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#000000',
+  },
+  dashboardSection: {
+    paddingHorizontal: 24,
+    marginBottom: 32,
+  },
+  dashboardTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#FFFFFF',
+    marginBottom: 16,
+  },
+  dashboardGrid: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  dashboardCard: {
+    flex: 1,
+    borderRadius: 8,
+    overflow: 'hidden',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  dashboardCardGradient: {
+    padding: 12,
+    alignItems: 'center',
+    gap: 6,
+  },
+  dashboardCardTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#000000',
+    textAlign: 'center',
   },
   featuresSection: {
     paddingHorizontal: 24,
