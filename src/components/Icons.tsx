@@ -322,3 +322,27 @@ export const UserGroupIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF
     <Path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" fill={color} />
   </Svg>
 );
+
+export const PaperAirplaneIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" fill={color} />
+  </Svg>
+);
+
+export const FunnelIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" fill={color} />
+  </Svg>
+);
+
+export const EllipsisVerticalIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" fill={color} />
+  </Svg>
+);
+
+export const ChartBarIcon: React.FC<IconProps> = ({ size = 24, color = '#FFFFFF', style }) => (
+  <Svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={style}>
+    <Path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" fill={color} />
+  </Svg>
+);

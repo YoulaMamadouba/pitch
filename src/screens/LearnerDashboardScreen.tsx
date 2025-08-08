@@ -25,6 +25,8 @@ import {
   UserIcon,
   EyeIcon,
   MicrophoneIcon,
+  ChatBubbleLeftRightIcon,
+  TrophyIcon,
 } from '../components/Icons';
 
 type LearnerDashboardScreenNavigationProp = StackNavigationProp<RootStackParamList, 'MainTabs'>;
@@ -50,6 +52,22 @@ export const LearnerDashboardScreen: React.FC = () => {
 
   const handleVoiceRecordingPress = () => {
     navigation.navigate('VoiceRecording');
+  };
+
+  const handleAICoachChatPress = () => {
+    navigation.navigate('AICoachChat' as any);
+  };
+
+  const handleLeaderboardPress = () => {
+    navigation.navigate('Leaderboard' as any);
+  };
+
+  const handleVRCalibrationPress = () => {
+    navigation.navigate('VRCalibration' as any);
+  };
+
+  const handleEmotionRecognitionPress = () => {
+    navigation.navigate('EmotionRecognition' as any);
   };
 
   return (
@@ -199,6 +217,40 @@ export const LearnerDashboardScreen: React.FC = () => {
               </View>
             </LinearGradient>
           </TouchableOpacity>
+        </View>
+
+        {/* Quick Access */}
+        <View style={styles.quickAccessSection}>
+          <Text style={styles.sectionTitle}>Accès Rapide</Text>
+          <View style={styles.quickAccessGrid}>
+            <TouchableOpacity style={styles.quickAccessCard} onPress={handleAICoachChatPress}>
+              <View style={styles.quickAccessIcon}>
+                <ChatBubbleLeftRightIcon size={24} color="#FFFFFF" />
+              </View>
+              <Text style={styles.quickAccessTitle}>Coach IA</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={styles.quickAccessCard} onPress={handleLeaderboardPress}>
+              <View style={styles.quickAccessIcon}>
+                <TrophyIcon size={24} color="#FFFFFF" />
+              </View>
+              <Text style={styles.quickAccessTitle}>Classement</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={styles.quickAccessCard} onPress={handleVRCalibrationPress}>
+              <View style={styles.quickAccessIcon}>
+                <EyeIcon size={24} color="#FFFFFF" />
+              </View>
+              <Text style={styles.quickAccessTitle}>Calibrage VR</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={styles.quickAccessCard} onPress={handleEmotionRecognitionPress}>
+              <View style={styles.quickAccessIcon}>
+                <UserIcon size={24} color="#FFFFFF" />
+              </View>
+              <Text style={styles.quickAccessTitle}>Émotions</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* Module Grid */}
@@ -711,6 +763,37 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 14,
     fontWeight: '500',
+  },
+  quickAccessSection: {
+    paddingHorizontal: 24,
+    marginBottom: 24,
+  },
+  quickAccessGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  quickAccessCard: {
+    backgroundColor: 'rgba(55, 65, 81, 0.5)',
+    borderRadius: 12,
+    padding: 16,
+    width: '48%',
+    alignItems: 'center',
+  },
+  quickAccessIcon: {
+    width: 48,
+    height: 48,
+    backgroundColor: '#F59E0B',
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  quickAccessTitle: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });
 

@@ -31,6 +31,10 @@ import HelpAndSupportScreen from '../screens/HelpAndSupportScreen';
 import { CoachDashboardScreen } from '../screens/CoachDashboardScreen';
 import { HRDashboardScreen } from '../screens/HRDashboardScreen';
 import { ModuleDetailScreen } from '../screens/ModuleDetailScreen';
+import { AICoachChatScreen } from '../screens/AICoachChatScreen';
+import { LeaderboardScreen } from '../screens/LeaderboardScreen';
+import { VRCalibrationScreen } from '../screens/VRCalibrationScreen';
+import { EmotionRecognitionScreen } from '../screens/EmotionRecognitionScreen';
 
 // Créer les navigateurs
 const Stack = createStackNavigator<RootStackParamList>();
@@ -75,7 +79,7 @@ const MainTabNavigator = () => {
         options={{
           tabBarLabel: 'Accueil',
           tabBarIcon: ({ color, size }) => (
-            <HomeIcon width={size} height={size} color={color} />
+            <HomeIcon size={size} color={color} />
           ),
         }}
       />
@@ -85,7 +89,7 @@ const MainTabNavigator = () => {
         options={{
           tabBarLabel: 'Modules',
           tabBarIcon: ({ color, size }) => (
-            <BookOpenIcon width={size} height={size} color={color} />
+            <BookOpenIcon size={size} color={color} />
           ),
         }}
       />
@@ -95,7 +99,7 @@ const MainTabNavigator = () => {
         options={{
           tabBarLabel: 'Communauté',
           tabBarIcon: ({ color, size }) => (
-            <UsersIcon width={size} height={size} color={color} />
+            <UsersIcon size={size} color={color} />
           ),
         }}
       />
@@ -105,7 +109,7 @@ const MainTabNavigator = () => {
         options={{
           tabBarLabel: 'Profil',
           tabBarIcon: ({ color, size }) => (
-            <UserIcon width={size} height={size} color={color} />
+            <UserIcon size={size} color={color} />
           ),
         }}
       />
@@ -115,7 +119,7 @@ const MainTabNavigator = () => {
         options={{
           tabBarLabel: 'Notifications',
           tabBarIcon: ({ color, size }) => (
-            <BellIcon width={size} height={size} color={color} />
+            <BellIcon size={size} color={color} />
           ),
         }}
       />
@@ -153,7 +157,6 @@ export const AppNavigator = () => {
         <Stack.Screen name="Quiz" component={PlaceholderScreen} />
         <Stack.Screen name="QuizResults" component={PlaceholderScreen} />
         <Stack.Screen name="Certificate" component={PlaceholderScreen} />
-        <Stack.Screen name="Leaderboard" component={PlaceholderScreen} />
         <Stack.Screen name="CommunityFeed" component={PlaceholderScreen} />
         <Stack.Screen name="PublishVideo" component={PlaceholderScreen} />
                  <Stack.Screen name="Comments" component={PlaceholderScreen} />
@@ -163,9 +166,13 @@ export const AppNavigator = () => {
          <Stack.Screen name="Feedback" component={FeedbackScreen} />
          <Stack.Screen name="Achievements" component={AchievementsScreen} />
          <Stack.Screen name="HelpAndSupport" component={HelpAndSupportScreen} />
-         <Stack.Screen name="CoachDashboard" component={CoachDashboardScreen} />
-         <Stack.Screen name="HRDashboard" component={HRDashboardScreen} />
-         <Stack.Screen name="ModuleDetail" component={ModuleDetailScreen} />
+                 <Stack.Screen name="CoachDashboard" component={CoachDashboardScreen} />
+        <Stack.Screen name="HRDashboard" component={HRDashboardScreen} />
+        <Stack.Screen name="ModuleDetail" component={ModuleDetailScreen} />
+        <Stack.Screen name="AICoachChat" component={AICoachChatScreen} />
+        <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
+        <Stack.Screen name="VRCalibration" component={VRCalibrationScreen} />
+        <Stack.Screen name="EmotionRecognition" component={EmotionRecognitionScreen} />
          <Stack.Screen name="Subscription" component={PlaceholderScreen} />
         <Stack.Screen name="FAQ" component={PlaceholderScreen} />
         <Stack.Screen name="Support" component={PlaceholderScreen} />
